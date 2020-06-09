@@ -1,2 +1,167 @@
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<div class="preloader"></div>
+<section class="intro">  
+    <div class="content">
+      
+      <video autoplay playsinline muted loop preload poster="https://i.ibb.co/YR6vB3G/Untitled-drawing-2020-06-08-T224114-087.png">
+        <!-- <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ocean-small.webm" />
+        <source src="http://thenewcode.com/assets/videos/ocean-small.mp4" /> -->
+      </video>
+       <svg  data-aos="fade-right"  viewBox="0 0 285 85" preserveAspectRatio="xMidYMid slice">
+        <defs>
+        <mask id="mask" x="0" y="0" width="100%" height="85%" >
+          <rect x="0" y="0" width="100%" height="85%" />
+        <text x="105"  y="50">TW</text>
+       
+        <!-- <text class="subtext" x="105" y="80">tevin wang</text> -->
+          </mask>
+      </defs>
+     <rect x="0" y="0" width="100vw" height="80vh" />
+      </svg>
+      <h2 class="below-box " data-aos="fade-right">tevin wang</h2>
+      <!-- <div class="box">
+        <div class="box-content">
+          <h1 style="z-index: 3;">TW
+          </h1> 
+            
+        </div>
+      </div> -->
+      <h2><Br></h2>
+        <a href="#number2"><div class='icon-scroll animated animatedFadeInUp fadeInUp'></div></a>
+     
+      <!-- <h2>tevin wang</h2> -->
+      
+      </div>
+      
+   </div>
+   
+  </section>
 
-<h2>It's me, Tevin. I like weird things.</h2>
+ 
+  <section class="intro" id="number2">
+    
+
+    <div class="content" style="color: white; text-align: left; width: 50vw;">
+      <div class="fullscreen-bg">
+        <video data-aos="fade"loop muted autoplay poster="img/video-frame.png"  id="myVideo">
+            <source src="mockup-portfolio.mov" type="video/mp4">
+        </video>
+      </div>  
+      <div class="text-content"> 
+        <h1   style="color: white; font-size: 5em; border: 0; ">Entrepreneur.<Br></h1>
+          <h1  style="color: white; font-size: 5em; border: 0; ">Developer.</h1>
+          <p data-aos="fade-right" style="color: white; width: 50%; border: 0; ">Hello, my name is Tevin. I am interested in web and app development, and wish to start a company in the future. 
+          I am currently studying at Valley Christian High School as a rising junior.</p>
+      </div>
+     
+   </div>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>const video = document.querySelector("video");
+    if (window.matchMedia('(prefers-reduced-motion)').matches) {
+      video.removeAttribute("autoplay");
+      video.pause();
+    }
+    
+
+    $(function() {
+    $('.scroll-down').click (function() {
+      $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
+      return false;
+    });
+  });
+
+  // Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
+  $(window).scroll(function () {
+
+/* Check the location of each desired element */
+$('h1').each(function (i) {
+
+    var bottom_of_object = $(this).position().top + $(this).outerHeight();
+    var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+    /* If the object is completely visible in the window, fade it it */
+    if (bottom_of_window > bottom_of_object) {
+
+        $(this).animate({
+            'opacity': '1'
+        }, 500);
+
+    }
+
+});
+
+});
+</script>
+<script>
+// Get the video
+var video2 = document.getElementById("myVideo");
+
+video2.play();
+video2.addEventListener('ended', () => {
+      video2.currentTime = 0.05;
+      video2.play();
+    });
+
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+ AOS.init({
+  // Global settings:
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 500, // values from 0 to 3000, with step 50ms
+  duration: 1000, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: true, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
+</script> 
+<script>
+  $(window).on('load', (function() {
+   $('.preloader').fadeOut('slow');
+}));
+</script>
