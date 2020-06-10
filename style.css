@@ -5,6 +5,8 @@
   body {
     margin: 0;
     font-weight: 500;
+    width: 100vw;
+    background-color: #000 !important;
     overflow-x: hidden;
     font-family: 'HelveticaNeue', 'Raleway', sans-serif;;
   }
@@ -51,7 +53,7 @@
   }
   h2 {
       font-weight: 300;
-      font-size: 5em;
+      font-size: 4em;
   }
   p {
     font-size: 1.5em;
@@ -131,11 +133,12 @@
  
 video { width: 100%; height: 40vh;}
 svg { 
-  width: 100%;
+  width: 100vw;
   position:absolute;
   top: 0;
   left: 0; 
   height: 100%;
+  /* height: 100%; */
  
 }
 svg text {
@@ -157,9 +160,10 @@ svg > rect {
 }
 .below-box {
     position: absolute;
-    top: 60vh;
+    top: 65vh;
+    left: 0;
     text-align: center;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
   }
 
@@ -320,7 +324,7 @@ svg > rect {
   width: 40px;
   height: 70px;
   margin-left: -20px;
-  top: 90%;
+  top: 90vh;
   margin-top: -35px;
   box-shadow: inset 0 0 0 3px #000;
   border-radius: 25px;
@@ -395,18 +399,18 @@ p {
   z-index: 1;
 }
 
-@media (min-aspect-ratio: 16/9) {
+/* @media (min-aspect-ratio: 16/9) {
   #myVideo {
     height: 300%;
     top: 0;
   }
 } 
-/* @media (max-aspect-ratio: 16/9) {
+@media (max-aspect-ratio: 16/9) {
   #myVideo {
     width: 300vw;
     left: -100vw;
   }
-} */
+}
 
 @media (max-width: 767px) {
   .fullscreen-bg {
@@ -416,7 +420,7 @@ p {
   #myVideo {
     display: none;
   }
-}
+} */
 
 .preloader {
   position: absolute;
@@ -429,4 +433,12 @@ p {
   background-repeat: no-repeat; 
   background-color: #FFF;
   background-position: center;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  svg {
+    width: 100vw;
+    height: 30vh;
+  }
 }
