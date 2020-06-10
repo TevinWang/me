@@ -5,8 +5,17 @@
   <title>Tevin Wang - Entrepreneur, developer, student</title>
 </head>
 <div class="preloader"></div>
-<section class="intro">  
+
+<section class="intro intro-1" id="tw">  
+  
     <div class="content">
+      <div class="nav">
+        <a  href="#tw" class="side side-stuff-left"><h3>TW</h3></a>
+        <hr>
+        <a  href="#number2" class="side side-stuff-left-2"><h3>ABOUT ME</h3></a>
+        <a  href="#" class="side side-stuff-right-1"><h3>INITIATIVES<br></h3></a>
+        <a  href="#" class="side side-stuff-right-2"><h3>RESUME</h3></a>
+      </div>
       
       <video autoplay playsinline muted loop preload poster="https://i.ibb.co/YR6vB3G/Untitled-drawing-2020-06-08-T224114-087.png">
         <!-- <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ocean-small.webm" />
@@ -38,12 +47,12 @@
       
       </div>
       
-   </div>
+    </section>
    
-  </section>
+
 
  
-  <section class="intro" id="number2">
+  <section class="intro intro-2" id="number2">
     
 
     <div class="content" style="color: white; text-align: left; width: 50vw;">
@@ -87,6 +96,7 @@
    </div>
   </section>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="node_modules/in-view/dist/in-view.min.js"></script>
   <script>const video = document.querySelector("video");
     if (window.matchMedia('(prefers-reduced-motion)').matches) {
       video.removeAttribute("autoplay");
@@ -189,5 +199,32 @@ video2.addEventListener('ended', () => {
 <script>
   $(window).on('load', (function() {
    $('.preloader').fadeOut('slow');
+   
+   $('body').delay(1000).css("overflow-y","visible");
 }));
 </script>
+<script>
+  $(document).ready(function(){
+	$(window).scroll(function(){
+  	var light_pos = $('.intro-1').offset().top;
+    var light_height = $('.intro-1').height();
+    var menu_pos = $('.side').offset().top;
+    var menu_height = $('.side').height();
+    var scroll = $(window).scrollTop();
+    console.log('light',light_pos);
+    console.log('menu',menu_pos);
+    console.log('scroll',scroll);
+    
+    if(menu_pos > light_pos && menu_pos < (light_pos + light_height)) {
+    	$('.side').addClass('menu_black');
+      $('.side').removeClass('menu_white');
+    }
+    else {
+    	$('.side').removeClass('menu_black');
+      $('.side').addClass('menu_white');
+    }
+    
+  })
+})
+</script>
+

@@ -8,6 +8,7 @@
     width: 100vw;
     background-color: #000 !important;
     overflow-x: hidden;
+    overflow-y: hidden;
     font-family: 'HelveticaNeue', 'Raleway', sans-serif;;
   }
   
@@ -19,7 +20,7 @@
     max-width: none;
     background-color: #FFFFFF;
     height: 100vh;
-    width: 100vw;
+    width: 80vw;
     
   }
   section:nth-of-type(2n) {
@@ -426,8 +427,9 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
   z-index: 9999;
   background-image: url('https://mlvflygf8ocf.i.optimole.com/HxjlOTM.Vqg1~e4d7/w:512/h:512/q:75/https://naissus.com.au/wp-content/uploads/2020/04/loader.gif');
   background-repeat: no-repeat; 
@@ -671,3 +673,93 @@ p {
   border-color: transparent;
   transform: translate(-50%, 100%);
 }
+.nav {
+  display: inline;
+}
+.side-stuff-left {
+  -webkit-transform:rotate(-90deg);
+  transform:rotate(-90deg);
+  position: fixed;
+  left: 1em;
+  z-index: 9998;
+  white-space: nowrap;
+  /* height: 40vh; */
+  font-size: 1.5em;
+
+}
+
+.side-stuff-left-2 {
+   -webkit-transform:rotate(-90deg);
+   transform:rotate(-90deg);
+   position: fixed;
+   left: -1.25em;
+   z-index: 9998;
+   white-space: nowrap;
+   /* height: 40vh; */
+   font-size: 1.5em;
+  top: 60vh;
+  white-space: nowrap;
+  
+}
+
+.side-stuff-right-1 {
+  -webkit-transform:rotate(90deg);
+  transform:rotate(90deg);
+  position: fixed;
+  right: -1.50em;
+  z-index: 9998;
+  white-space: nowrap;
+  /* height: 40vh; */
+  font-size: 1.5em;
+
+ white-space: nowrap;
+ 
+}
+
+.side-stuff-right-2 {
+  -webkit-transform:rotate(90deg);
+  transform:rotate(90deg);
+  position: fixed;
+  right: -1em;
+  z-index: 9998;
+  white-space: nowrap;
+  /* height: 40vh; */
+  font-size: 1.5em;
+ top: 60vh;
+ white-space: nowrap;
+ 
+}
+
+a {
+  text-decoration:none;
+  
+}
+
+/* a:hover {
+   color: rgb(75, 74, 74); 
+} */
+
+hr {
+  background-color:#C80000;
+  color:#000000;
+  -webkit-transform:rotate(90deg);
+  position:absolute;
+  z-index: 9998;
+  left: 100px;
+  height:2px;
+  left:130px;
+  border:2px;
+}
+a:hover {
+  color: grey !important;
+}
+.side {
+  color: #000;
+}
+.menu_white {
+  color: #fff;
+ }
+ 
+ .menu_black {
+  color: #000;
+ }
