@@ -371,12 +371,12 @@ svg>rect {
     animation-name: scroll;
 }
 
-.icon-scroll .white {
+.white {
     box-shadow: inset 0 0 0 3px #fff;
     top: 190vh;
 }
 
-.icon-scroll:before .white {
+.white {
     background: #fff;
 }
 
@@ -852,7 +852,7 @@ a:hover {
 .smallcards .card {
     margin-left: 27px;
     margin: 0 auto;
-    border-radius: 0px;
+    border-radius: 10px;
     border-color: white;
 }
 
