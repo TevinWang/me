@@ -157,7 +157,7 @@
                             <!-- <img src="img/fightfiwhitereal.png" style="width: 100%; transform: translateZ(20px);"></img> -->
                             <div class="title" style="position: absolute; top: 50%;  text-align: left; color: white; ">
                                 <h2 style="font-size: 1.5em; transform: translateZ(20px);">QuestHacks</h2>
-                                <p style="color: white; font-size: 1em; transform: translateZ(20px);">Entrepreneurship-themed student run hackathon at VCHS.</p>
+                                <p style="color: white; font-size: 1em;transform: translateZ(20px);">Entrepreneurship-themed student run hackathon at VCHS.</p>
                             </div>
 
                         </div>
@@ -254,6 +254,129 @@
                 <!-- </div>
       -->
         </div>
+    </section>
+    <section class="intro intro-4" id="resume">
+        <div class="resume-wrapcontent">
+
+
+            <div class="profile-pic">
+            </div>
+
+            <div class="resume-content">
+                <h1>resume</h1>
+                <span><Br><br>student | developer | entrepreneur</span>
+                <p>Tevin Wang is a entrepeneur, developer, and a high school rising junior studying at Valley Christian High School. He has a passion for web development and business, utilizing his skills in his startup and hackathon initiatives. He also
+                    enjoys learning more about design, music, and badminton.</p>
+
+                <h2>experience</h2>
+                <div style="display: flex;">
+                    <div class="experience-card">
+                        <div style="display: flex">
+                            <h1><b>Exec Director</b> | QuestHacks</h1>
+
+                        </div>
+                        <span>2019</span>
+                        <p>Managed a team of 12 to create a 12-hour student-run entrepreneurship-themed hackathon.</p>
+                    </div>
+                    <div class="experience-card">
+                        <div style="display: flex">
+                            <h1><b>Founder and CEO</b> | FightFi</h1>
+                        </div>
+                        <span>2018 - Present</span>
+                        <p>Started a esports startup with a business partner in Valley Christian's Quest Incubator.</p>
+                    </div>
+                    <div class="experience-card">
+                        <div style="display: flex">
+                            <h1><b>Founder</b> | Musicizer LLC</h1>
+                        </div>
+                        <span>2019 - Present</span>
+                        <p>Originally initiated under the mentorship of UCSD professors, the app is now in development stage for the mobile platform.</p>
+                    </div>
+
+                </div>
+                <h2>awards</h2>
+                <ul>
+                    <li>
+                        <b>UCSD Gordon Research Center</b> HS Fellow of Leadership Award
+                    </li>
+                    <li>
+                        <b>ICDC</b> Double Qualifier
+                    </li>
+                    <li>
+                        <b>Semifinalist</b> of Diamond Challenge
+                    </li>
+                    <li>
+                        <b>Semifinalist</b> of VCHS President's Business Challenge
+                    </li>
+                    <li>
+                        <b>2nd Place</b> at SolarHacks
+                    </li>
+                    <li>
+                        <b>Quest Award</b> of Algebra II Honors, Trignometry/PreCalculus BC, and Intro to Entrepreneurship
+                    </li>
+                </ul>
+                <h2>skills</h2>
+                <div style="display: flex; justify-content: space-evenly; ">
+                    <div class="skill-tile">
+                        <i class="fa fa-html5 fa-2x" aria-hidden="true"></i>
+                        <p>HTML/CSS/JS</p>
+                    </div>
+                    <div class="skill-tile">
+                        <i class="fa fa-code fa-2x" aria-hidden="true"></i>
+                        <p>Flutter</p>
+                    </div>
+                    <div class="skill-tile">
+                        <i class="fa fa-asterisk fa-2x" aria-hidden="true"></i>
+                        <p>React</p>
+                    </div>
+                    <div class="skill-tile">
+                        <i class="fa fa-code-fork fa-2x" aria-hidden="true"></i>
+                        <p>NodeJS</p>
+                    </div>
+                    <div class="skill-tile">
+                        <i class="fa fa-list fa-2x" aria-hidden="true"></i>
+                        <p>SQL</p>
+                    </div>
+                </div>
+                <div style="display: flex; margin-top: 10px; justify-content: space-evenly; ">
+                    <div class="skill-tile">
+                        <i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i>
+                        <p>Economics</p>
+                    </div>
+                    <div class="skill-tile">
+                        <i class="fa  fa-video-camera fa-2x" aria-hidden="true"></i>
+                        <p>Event Planning</p>
+                    </div>
+                    <div class="skill-tile">
+                        <i class="fa fa-wechat fa-2x" aria-hidden="true"></i>
+                        <p>Business Pitching</p>
+                    </div>
+                    <div class="skill-tile">
+                        <i class="fa fa-bank fa-2x" aria-hidden="true"></i>
+                        <p>Investment</p>
+                    </div>
+                    <div class="skill-tile">
+                        <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                        <p>Marketing</p>
+                    </div>
+                </div>
+                <h2>education</h2>
+                <ul>
+                    <li><b>Valley Christian High School</b>(2018-2022) - AMSE Honors & Conservatory Honors</p>
+                        <li><b>UCSD Cosmos 2019</b> - Cluster 9: Music & Technology</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- <h2>tevin wang</h2> -->
+
+        </div>
+
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="node_modules/in-view/dist/in-view.min.js"></script>
@@ -410,6 +533,27 @@
 
             })
         });
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var light_pos = $('.intro-3').offset().top;
+                var light_height = $('.intro-3').height();
+                var menu_pos = $('.side').offset().top;
+                var menu_height = $('.side').height();
+                var scroll = $(window).scrollTop();
+                console.log('light', light_pos);
+                console.log('menu', menu_pos);
+                console.log('scroll', scroll);
+
+                if (menu_pos > light_pos && menu_pos < (light_pos + light_height)) {
+                    $('.side').addClass('menu_black');
+                    $('.side').removeClass('menu_white');
+                } else {
+                    $('.side').removeClass('menu_black');
+                    $('.side').addClass('menu_white');
+                }
+
+            })
+        });
     </script>
     <script>
         const tilt = $('.js-tilt').tilt();
@@ -508,5 +652,9 @@
             //     // instead of a settings object
             // ]
         });
+        $('.intro-4').css('top', '' + ($('.intro-1').height() + $('.intro-2').height() + $('.intro-3').height()) + 'px');
+        $('.resume-content').css('top', '' + ($('.intro-1').height() + $('.intro-2').height() + $('.intro-3').height()) + 'px');
+        $('.profile-pic').css('height', $('.resume-content').outerHeight(true) + 'px')
+        console.log($('.intro-4').height());
     </script>
 </body>

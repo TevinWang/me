@@ -2,7 +2,12 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    height: 100%;
     margin: 0;
     font-weight: 500;
     width: 100vw;
@@ -25,18 +30,34 @@ section {
     margin: 0;
     max-width: none;
     background-color: #FFFFFF;
-    height: 100vh;
-    width: 80vw;
+    /* height: 100vh;
+    width: 80vw; */
 }
 
 section:nth-of-type(2n) {
+    height: 100vh;
+    width: 80vw;
     top: 100vh;
     background-color: rgb(0, 0, 0);
 }
 
+section:nth-of-type(1n) {
+    height: 100vh;
+    /* width: 80vw; */
+    /* top: 100vh; */
+}
+
 section:nth-of-type(3n) {
+    height: 100vh;
+    width: 80vw;
     top: 200vh;
     background-color: white;
+}
+
+section:nth-of-type(4n) {
+    /* height: 100vh; */
+    height: relative;
+    width: 80vw;
 }
 
 .intro {
@@ -61,7 +82,7 @@ h1 {
     border: 0.025em black solid;
 }
 
-h2 {
+.intro-2 h2 {
     font-weight: 300;
     font-size: 4em;
 }
@@ -867,4 +888,112 @@ a:hover {
     height: 400px;
     width: 300px;
     border: 4px solid rgba(187, 187, 187, 0.575);
+}
+
+.profile-pic {
+    position: relative;
+    width: 30vw;
+    /* height: 100vh; */
+    float: left;
+    margin-left: 0vw;
+    background: url('https://i.ibb.co/YR6vB3G/Untitled-drawing-2020-06-08-T224114-087.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.resume-content {
+    position: absolute;
+    width: 60vw;
+    /* height: 100vh; */
+    margin-left: 30vw;
+    padding: 5vw;
+    color: white;
+}
+
+.resume-content h1 {
+    font-size: 4em;
+    color: white;
+}
+
+.resume-content h2 {
+    font-size: 2em;
+}
+
+.resume-content p {
+    font-size: 1em;
+    color: white;
+}
+
+.resume-content hr {
+    background-image: linear-gradient(90deg, red, transparent);
+    height: 12px;
+    border: 0;
+    clear: both;
+    display: block;
+    width: 96%;
+    height: 1px;
+}
+
+.resume-content span {
+    font-size: 0.75em;
+    color: rgb(81, 226, 154);
+}
+
+.experience-card {
+    background-color: white;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    padding: 15px;
+    color: black;
+    border-radius: 14px;
+    margin: 0.5em;
+    -webkit-box-shadow: 0px 0px 23px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 23px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 23px -10px rgba(0, 0, 0, 0.75);
+}
+
+.experience-card h1 {
+    font-size: 1em !important;
+    border: 0;
+    color: black;
+}
+
+.experience-card h2 {
+    font-size: 1.25em;
+    color: black;
+}
+
+.experience-card p {
+    font-size: 0.75em;
+    color: black;
+}
+
+.experience-card span {
+    font-size: 1em;
+    color: rgb(81, 226, 154);
+}
+
+.skill-tile {
+    color: rgb(81, 226, 154);
+    text-align: center;
+}
+
+.resume-content ul li::before {
+    content: "\2022";
+    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: rgb(81, 226, 154);
+    /* Change the color */
+    font-weight: bold;
+    /* If you want it to be bold */
+    display: inline-block;
+    /* Needed to add space between the bullet and the text */
+    width: 1em;
+    /* Also needed for space (tweak if needed) */
+    margin-left: -1em;
+    /* Also needed for space (tweak if needed) */
+}
+
+.experience-card span {
+    font-size: 0.75em;
 }
