@@ -829,7 +829,7 @@ p {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     position: fixed;
-    right: -1em;
+    right: -0.7em;
     z-index: 9998;
     white-space: nowrap;
     /* height: 40vh; */
